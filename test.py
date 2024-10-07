@@ -1,8 +1,4 @@
-from model.hextile import HexTile
-from model.board import Board
+from controller.game import Game
 
-# Create a Board object with radius 2
-board = Board(5)
-
-# Print the board
-print(board)
+game = Game()
+game.run()

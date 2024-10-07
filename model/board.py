@@ -1,4 +1,11 @@
-from hextile import HexTile
+'''
+Board class.
+
+Board class is used to represent the board of the game.
+It stores the tiles of the board along with their coordinates.
+'''
+
+from model.hextile import HexTile
 
 class Board:
     def __init__(self, radius):
@@ -11,8 +18,6 @@ class Board:
         for x in range(-self.radius + 1, self.radius):
             y_upper = (self.radius - 1) * 2 - abs(x)
             y_lower = -y_upper
-
-            print(f"x: {x}, y_lower: {y_lower}, y_upper: {y_upper}")
 
             for y in range(y_lower, y_upper + 1, 2):
                 self.tiles[(x, y)] = HexTile(x, y)
